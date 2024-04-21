@@ -89,10 +89,10 @@ donde $N$ es el numero de cuerpos del sistema y $K^{(h)}$ el numero de ligaduras
 
 La energía cinética y la energía potencial del sistema estarían dadas por:
 
-\begin{gather}
-	T = \frac{1}{2} m \left(\dot{x}^2 + (-\dot{x}\tan{\alpha})^2 \right) \\
-	V = mg\left(x\tan{\alpha} + h \right)
-\end{gather}
+\begin{align}
+	T &= \frac{1}{2} m \left(\dot{x}^2 + (-\dot{x}\tan{\alpha})^2 \right) \\
+	V &= mg\left(x\tan{\alpha} + h \right)
+\end{align}
 
 El lagrangiano es entonces:
 
@@ -173,10 +173,10 @@ Una vez más, usando la \Cref{eq:minim_coordinates} se obtiene que el numero mí
 
 La energía cinética y la potencial están dadas por:
 
-\begin{gather}
-	T = \frac{1}{2} \left(m_1 \dot{y}_1^2 + m_2 \dot{y}_2^2 \right) \\
-	V = -g \left(m_1 y_1 + m_2 y_2 \right)
-\end{gather}
+\begin{align}
+	T &= \frac{1}{2} \left(m_1 \dot{y}_1^2 + m_2 \dot{y}_2^2 \right) \\
+	V &= -g \left(m_1 y_1 + m_2 y_2 \right)
+\end{align}
 
 Y el Lagrangiano es:
 
@@ -239,10 +239,114 @@ Adicionalmente se tienen las ecuaciones de ligadura y su clasificación:
 \end{itemize}
 
 \subsection{Clasificación de Sistemas Físicos}
-Segun las ligaduras que posea un sistema puede ser clasificado de las siguientes formas
+Según las ligaduras que posea un sistema puede ser clasificado de las siguientes formas
 
 \begin{itemize}
-	\item \textbf{Holónomo:} Si todas las ligaduras son geométricas o cinemáticas integrables i.e. $\forall f, \, f = f(r_i, t) \quad \lor \quad \forall f = f(r_i, \dot{r}_i, t) \; \exists \; \int f.$
+	\item \textbf{Holónomo:} Si todas las ligaduras son geométricas o cinemáticas integrables i.e. $\forall f, \, f = f(r_i, t) \quad \lor \quad \forall f = f(r_i, \dot{r}_i, t) \; \exists \; \int f$.
+		\begin{itemize}
+			\item Esclerónomo: Si todas las ligaduras son estacionarias i.e. $\forall f, \; f = f(r_i)$.
+			\item Reónomo: Si alguna de las ligaduras depende explícitamente del tiempo e.g. $f = f(r_i, t)$.
+		\end{itemize}
+	\item \textbf{No Holónomo:} Si alguna de sus ligaduras es cinemática no integrable i.e. $\exists f = f(r_i, \dot{r}_i, t) \; : \; \nexists \int f$.
 \end{itemize}
+
+Los dos sistemas tratados fueron del tipo \emph{holónomo esclerónomo}, por ello surgió la pregunta \emph{¿Cual seria un ejemple de un sistema no holónomo?} Se da como ejemplo un disco que rueda sobre un plano sin deslizarse.
+
+%TODO Add rolling disk
+\begin{figure}[htbp!]
+	\caption{Disco Rodando Sobre un Plano sin Deslizamiento}
+	\label{fig:disk_rolling}
+\end{figure}
+
+Para ese sistema descrito por la \Cref{fig:disk_rolling}, pose las siguientes ligaduras:
+
+\begin{equation}
+	\begin{cases}
+		\dot{x}\cos{\varphi} + \dot{y}\sin{\varphi} &= R\dot{\theta} \\
+		\dot{x}\sin{\varphi} - \dot{y}\cos{\varphi} &= 0
+	\end{cases}
+\end{equation}
+
+Expresando las ligaduras de forma diferencial:
+
+\begin{align}
+	\cos{\varphi} \, dx + \sin{\varphi} \, dy &= R d\theta \label{eq:dexact_theta}\\
+	\sin{\varphi} \, dx - \cos{\varphi} \, dy &= 0 \label{eq:constrained_2}
+\end{align}
+
+De la \Cref{eq:dexact_theta} se obtiene
+
+\begin{equation}
+	\partial_x \theta = \frac{1}{R} \cos{\varphi} \quad \land \quad \partial_y \theta = \frac{1}{R} \sin{\varphi}
+\end{equation}
+
+y reemplazando en \Cref{eq:constrained_2} se obtiene
+
+\begin{equation}
+	\partial_y \theta \, dx = \partial_x \theta \, dy \quad \iff \quad x = y
+\end{equation}
+
+Esto muestra que la ligadura es integrable solo si el disco se mueve en la linea recta dada por $x = y$, del resto no es integrable y el sistema seria no holónomo.
+
+\section{Aplicación}
+Finaliza la exposición y el director Alfonso Leyva propone un problema para aplicar lo expuesto.
+
+El problema consiste en un pingüino sobre un iglu de forma esférica, el cual se desliza sobre el mismo hasta caer al suelo. Se busca encontrar el angulo critico con respecto al centro del iglu en el cual el pingüino deja de estar en contacto con el iglu y procede a seguir en caída libre. La \Cref{fig:iglu} muestra un diagrama del problema.
+
+%TODO Add Iglu figure
+
+\begin{figure}[htbp!]
+	\caption{Diagrama del Sistema}
+	\label{fig:iglu}
+\end{figure}
+
+Debido a la naturaleza del sistema, se utilizan las coordenadas polares donde la energía cinética y potencial están dadas por:
+
+\begin{align}
+	T &= \frac{1}{2} m \left(\dot{r}^2 + \dot{r}^2 \dot{\theta}^2 \right) \\
+	V &= -mgr\cos{\theta}
+\end{align}
+
+El lagrangiano resultando en:
+
+\begin{equation}
+	\mathcal{L} = \frac{1}{2}m \left(\dot{r}^2 + r^2\dot{\theta}^2 \right) - mgr\cos{\theta}
+\end{equation}
+
+La ligadura de este sistema es $f = r - R$, es del tipo de activación ya que representa si la fuerza normal esta actuando, ya que después del angulo critico no hay contacto con el iglu. Debido a esto, toca utilizar la ecuacion de Euler-Lagrange pero igualado a una fuerza generalizada i.e.
+
+\begin{equation}
+	\frac{d}{dt}\left(\partial_{\dot{q}} \mathcal{L}\right) - \partial_q \mathcal{L} = \lambda \partial_{q}f
+\end{equation}
+
+donde $\lambda$ representa un parámetro de ajuste o ``\emph{fine tuning}''.
+
+Aplicando esta ultima ecuación se obtiene
+
+\begin{align}
+	m \left(\ddot{r} - r \dot{\theta}^2 + g\cos{\theta}\right) &= \lambda \\
+	2r\dot{r}\dot{\theta} + r^2\ddot{\theta} - gr\sin{\theta} &= 0
+\end{align}
+
+Debido a la ligadura, $r = R \implies r^{(n)} = 0$ las ecuaciones se simplifican ha:
+
+\begin{align}
+	-mR\dot{\theta}^{2} + mg\cos{\theta} &= \lambda \label{eq:r_equation}\\
+	R^2 \ddot{\theta} - gR\sin{\theta} &= 0 \label{eq:critical_theta}
+\end{align}
+
+Usando $\ddot{\theta} = \dot{\theta}\frac{d \theta}{d\theta}$, e integrando la \Cref{eq:critical_theta} se obtiene
+
+\begin{equation}
+	\dot{\theta} |_{\theta_c} = \frac{2}{R} g\left(1 - \cos{\theta_c} \right)
+\end{equation}
+
+Reemplazando en \Cref{eq:r_equation} y tomando las condiciones $\lambda = 0 \implies r = R \; \theta = \theta_c$. Se obtiene la expresión del angulo critico igual a:
+
+\begin{equation}
+	\cos{\theta_c} = \frac{2}{3}
+\end{equation}
+
+A partir de aplicar estas condiciones surge la pregunta \emph{¿Por qué se toma $\dot{r} = 0$ si en ese punto la velocidad no necesariamente es 0 y el movimiento sigue?} La razón radica en que el planteamiento va hasta el punto que se detiene el contacto, no se pretende describir lo que sucede después.
 
 \end{document}
