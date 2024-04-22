@@ -10,6 +10,8 @@
 \usepackage{tabularx, ragged2e, booktabs}
 \usepackage{float}
 \usepackage[spanish]{cleveref}
+\usepackage[sorting=none]{biblatex}
+\addbibresource{ref.bib}
 
 \usepackage{tikz}
 \usetikzlibrary{patterns}
@@ -57,7 +59,7 @@
 Siendo aproximadamente las 8:40 del 20 de Abril, 2024, se propone una reprogramación de futuros temas de exposición y fechas las para secciones del seminario. Se designa a Julian Avila como el responsable de llevar el protocolo de la sección.
 
 \begin{itemize}
-	\item Corchetes de Poisson (Zaudi Goméz, Julián Aros) - 25 de Abril
+	\item Corchetes de Poisson (Zaudi Goméz, Julián Aros) - 27 de Abril
 	\item Teorema de Noether (Mauricio Guevara) - 4 de Mayo
 	\item Transformaciones canónicas (Camilo Huertas) - 11 de Mayo
 	\item Dispersión de Rutherford (Sebastian Rodriguez, Issabela Ortiz) - 13 de Mayo
@@ -67,19 +69,46 @@ Siendo aproximadamente las 8:40 del 20 de Abril, 2024, se propone una reprograma
 	\item Potenciales Termodinámicos (Alexei Duran, Diego Acosta) - 1 de Junio
 \end{itemize}
 
-%TODO Add memebrs
+\subsubsection*{Seminaristas Presentes}
+\begin{itemize}
+	\item Julián Aros
+	\item Andrés Torres
+	\item Mauricio Guevara
+	\item Luciana Rengifo
+	\item Estaban Neira
+	\item Daniela Torres
+	\item Zaudí Goméz
+	\item Diego Acosta
+	\item Camilo Huertas
+	\item Nicolas Sandoval
+	\item Juan de los Rios
+	\item Santiago Talero
+	\item Laura Triana
+	\item Sebastián Manrique
+	\item Alexei Duran
+	\item Julian Avila
+\end{itemize}
+
+\subsubsection{Seminaristas Ausentes}
+\begin{itemize}
+	\item Alejandra Moreno
+	\item Issabel Ortiz
+	\item Sebastián Rodriguez
+	\item Sofía Cortez
+	\item Johan Barrera
+\end{itemize}
 
 \section{Inicio de Sección y Plano Inclinado}
 A las 9:07, comienza la exposición a cargo de Sebastián Manrique y Santiago Talero, titulada \textbf{El Plano Inclinado y la Maquina de Atwood Simple}.
 
 Se utilizan dos sistemas comunes en física para explicar el concepto de ligadura o constricción.
 
-El sistema consiste en una masa $m$ sobre un plano inclinado un angulo $\alpha$, sin fricción, como se muestra en la \Cref{fig:inclained_plane}.
+El sistema consiste en una masa $m$ sobre un plano inclinado un ángulo $\alpha$, sin fricción, como se muestra en la \Cref{fig:inclained_plane}.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.30\textwidth]{./Images/inclined-plane.pdf}
-	\caption{Diagrama del Plano Inclinado}
+	\caption{Diagrama del Plano Inclinado.}
 	\label{fig:inclained_plane}
 \end{figure}
 
@@ -146,26 +175,25 @@ A partir de esta ultima ecuación se puede obtener la expresión para la velocid
 Donde $A$ y $B$ son constantes que se determinan utilizando las condiciones iniciales del sistema.
 
 \section{Maquina de Atwood Simple}
-La maquina de Atwood simple consiste de dos masas conectadas por una cuerda la cual reposa sobre una polea. Es simple debido a que se toma la cuerda como inextensible y sin masa, al igual que la polea. La polea no presenta fricción con la cuerda y se presenta el diagrama en la \Cref{fig:atwood_machine}. La maquina cuenta con dos propiedades que la define:
+La maquina de Atwood simple consiste de dos masas conectadas por una cuerda que reposa sobre una polea. Es considerada porque se asume que la cuerda es inextensible y sin masa, al igual que la polea, y la polea no presenta fricción con la cuerda. Se presenta el diagrama en la \Cref{fig:atwood_machine}. La maquina cuenta con dos propiedades que la definen:
 
 \begin{itemize}
-	\item Si $m_1 = m_2 \implies a = 0$ i.e. si las masas son iguales no se presentara aceleración.
-	\item Si $m_1 \ne m_2 \implies a \ne 0$ i.e. si las masas son diferentes el movimiento sera acelerado.
+	\item Si $m_1 = m_2 \implies a = 0$ i.e. si las masas son iguales, no hay aceleración.
+	\item Si $m_1 \ne m_2 \implies a \ne 0$ i.e. si las masas son diferentes, el movimiento sera acelerado.
 \end{itemize}
-
 
 \begin{figure}[htbp!]
 	\centering
 	\includegraphics[width=0.3\textwidth]{./Images/atwood-machine.pdf}
-	\caption{Diagrama de Maquina de Atwood Simple}
+	\caption{Diagrama de Maquina de Atwood Simple.}
 	\label{fig:atwood_machine}
 \end{figure}
 
 \subsection{Preguntas emergentes}
-Después del planteamiento del sistema, el director Alfonso Leyva pregunta: \emph{¿Por qué es la cuerda inextensible y sin masa? ¿Cuales son las implicaciones de que la cuerda tuviese masa?} Si la cuerda no fuese inextensible se comportaría como un tipo de resorte y aparecería una fuerza y coeficiente adicional. Mientras que la masa supone la necesidad de una ecuación adicional para el sistema, pasando de tener 2 a 3 cuerpos.
+Después de presentar el sistema, el director Alfonso Leyva pregunta: \emph{¿Por qué es la cuerda inextensible y sin masa? ¿Cuales son las implicaciones de que la cuerda tuviera masa?} Si la cuerda no furea inextensible, se comportaría como un tipo de resorte, introduciendo fuerzas y coeficientes adicionales. Además, si tuviera masa, se necesitaria una ecuación adicional para el sistema, pasando de tener 2 a 3 cuerpos.
 
 \subsection{Ecuaciones de movimiento del sistema}
-Por la construcción del sistema se tienen las siguientes condiciones de ligadura:
+Debido a la construcción del sistema, se tienen las siguientes condiciones de ligadura:
 
 \begin{equation}
 	\begin{cases}
@@ -181,9 +209,9 @@ Por la construcción del sistema se tienen las siguientes condiciones de ligadur
 	\end{cases}
 \end{equation}
 
-Donde $l$ es la longitud de la cuerda sin contar la parte que gira sobre la correa, este termino se podría agregar sumando $\pi R$, $R$ siendo el radio de la polea, pero al final es una constante, y la solución no se vera afectada de tan grande forma.
+Donde $l$ es la longitud de la cuerda sin contar la parte que gira sobre la polea. Aunque se podria agregar $\pi R$, siendo $R$ el radio de la polea, esta adición no afectaría significativamente la solución.
 
-Una vez más, usando la \Cref{eq:minim_coordinates} se obtiene que el numero mínimo de coordenadas generalizadas para dos cuerpos con 5 ligaduras es:
+Usando la \Cref{eq:minim_coordinates}, se determina que el número mínimo de coordenadas generalizadas para dos cuerpos con 5 ligaduras es:
 
 \begin{gather}
 	s = 3(2) - 5 \\
@@ -203,19 +231,19 @@ Y el Lagrangiano es:
 	\mathcal{L} = \frac{1}{2} \left(m_1 \dot{y}_1^2 + m_2 \dot{y}_2^2 \right) + g \left(m_1 y_1 + m_2 y_2 \right)
 \end{equation}
 
-Sin embargo, el numero mínimo de coordenadas es 1, por ello se puede reemplazar $y_2$ en función de $y_1$ usando la ligadura $f_5^{(h)}$. Obteniendo:
+Sin embargo, el numero mínimo de coordenadas es 1, por lo que se puede reemplazar $y_2$ en función de $y_1$ usando la ligadura $f_5^{(h)}$. Obteniendo:
 
 \begin{equation}
 	\mathcal{L} = \frac{1}{2} \left(m_1 + m_2 \right) \dot{y}_1^2 + \left(m_1 - m_2 \right)g y_1 + m_2 gl
 \end{equation}
 
-Al tener el lagrangiano, se aplica la ecuación de Euler-Lagrange para obtener las ecuaciones de movimiento del sistema
+Al tener el Lagrangiano, se aplica la ecuación de Euler-Lagrange para obtener las ecuaciones de movimiento del sistema:
 
 \begin{equation}
 	\ddot{y}_1 - g\frac{\left(m_1 - m_2 \right)}{\left(m_1 + m_2\right)} = 0
 \end{equation}
 
-Pero al tener $\ddot{y}_1 = -\ddot{y_2}$
+Debido a que $\ddot{y}_1 = -\ddot{y_2}$
 
 \begin{equation}
 	\ddot{y}_{1,2} = \pm g \frac{\left(m_1 - m_2 \right)}{\left(m_1 + m_2\right)}
@@ -229,27 +257,27 @@ Donde:
 	\item Si $m_1 < m_2 \implies \ddot{y}_1 < 0 \quad \land \quad  \ddot{y}_2 > 0$
 \end{itemize}
 
-lo cual esta en acuerdo con lo establecido al plantear el problema.
+Lo cual esta en acuerdo con lo establecido al plantear el problema.
 
 \section{Profundización en el Concepto de Ligadura}
 \begin{definition}[Ligadura]
-	Las \emph{ligaduras} son funciones que establecen una relación entre coordenadas generalizadas.
+	Las \emph{ligaduras} son funciones que establecen una relación entre las coordenadas generalizadas de un sistema.
 \end{definition}
 
-Hay dos tipos generales de ligaduras:
+Existen dos tipos generales de ligaduras:
 
 \begin{itemize}
-	\item \textbf{Estructurales o de Construcción:} Son dadas por como se construye el sistema.
-	\item \textbf{De Activación:} Entregan información de la evolución del sistema y dependen de como se ponga el sistema a funcionar.
+	\item \textbf{Estructurales o de Construcción:} Se determinan por como se construye el sistema.
+	\item \textbf{De Activación:} Proporcionan información sobre la evolución del sistema y dependen de cómo se activa el sistema.
 \end{itemize}
 
-Las ligaduras se pueden tomar como fuerzas de tipo $f(r_i, \dot{r}_i, t)$ y por el método me multiplicadores de Lagrange pueden ser obtenidas.
+Las ligaduras se pueden tomar como fuerzas de tipo $f(r_i, \dot{r}_i, t)$ y pueden obtenerse mediante el método de los multiplicadores de Lagrange.
 
-Adicionalmente se tienen las ecuaciones de ligadura y su clasificación:
+Además, las ecuaciones de las ligaduras se pueden clasificar en:
 
 \begin{itemize}
 	\item \textbf{Unilaterales} La relación entre variables no puede ser expresada por medio de una igualdad i.e. $f \ne f(r_i, \dot{r}_i, t)$.
-	\item \textbf{Bilateral} Pueden ser expresadas por medio de igualdades, correspondiendo a la fase activa de una ligadura unilateral. Estas se pueden dividir en:
+	\item \textbf{Bilateral} Pueden ser expresadas por medio de igualdades y corresponden a la fase activa de una ligadura unilateral. Estas se pueden clasificar en:
 		\begin{itemize}
 			\item Cinemáticas: $f = f(r_i, \dot{r}_i, t)$.
 			\item Geométricas: $f = f(r_i, t)$.
@@ -258,7 +286,7 @@ Adicionalmente se tienen las ecuaciones de ligadura y su clasificación:
 \end{itemize}
 
 \subsection{Clasificación de Sistemas Físicos}
-Según las ligaduras que posea un sistema puede ser clasificado de las siguientes formas
+Los sistemas físicos pueden clasificarse según las ligaduras que posean de la siguiente manera:
 
 \begin{itemize}
 	\item \textbf{Holónomo:} Si todas las ligaduras son geométricas o cinemáticas integrables i.e. $\forall f, \, f = f(r_i, t) \quad \lor \quad \forall f = f(r_i, \dot{r}_i, t) \; \exists \; \int f$.
@@ -269,15 +297,16 @@ Según las ligaduras que posea un sistema puede ser clasificado de las siguiente
 	\item \textbf{No Holónomo:} Si alguna de sus ligaduras es cinemática no integrable i.e. $\exists f = f(r_i, \dot{r}_i, t) \; : \; \nexists \int f$.
 \end{itemize}
 
-Los dos sistemas tratados fueron del tipo \emph{holónomo esclerónomo}, por ello surgió la pregunta \emph{¿Cual seria un ejemple de un sistema no holónomo?} Se da como ejemplo un disco que rueda sobre un plano sin deslizarse.
+Los dos sistemas tratados fueron del tipo \emph{holónomo esclerónomo}, por ello surgió la pregunta \emph{¿Cual seria un ejemple de un sistema no holónomo?} Se da como ejemplo un disco que rueda sobre un plano sin deslizarse, como se muestra en la \Cref{fig:disk_rolling}.
 
-%TODO Add rolling disk
 \begin{figure}[htbp!]
-	\caption{Disco Rodando Sobre un Plano sin Deslizamiento}
+	\centering
+	\includegraphics[width=0.3\textwidth]{./Images/disk-rolling.png}
+	\caption{Disco Rodando Sobre un Plano sin Deslizamiento \cite{article}.}
 	\label{fig:disk_rolling}
 \end{figure}
 
-Para ese sistema descrito por la \Cref{fig:disk_rolling}, pose las siguientes ligaduras:
+Para este sistema, se tiene las siguientes ligaduras:
 
 \begin{equation}
 	\begin{cases}
@@ -286,37 +315,37 @@ Para ese sistema descrito por la \Cref{fig:disk_rolling}, pose las siguientes li
 	\end{cases}
 \end{equation}
 
-Expresando las ligaduras de forma diferencial:
+Expresando las ligaduras de forma diferencial, obtenemos:
 
 \begin{align}
 	\cos{\varphi} \, dx + \sin{\varphi} \, dy &= R d\theta \label{eq:dexact_theta}\\
 	\sin{\varphi} \, dx - \cos{\varphi} \, dy &= 0 \label{eq:constrained_2}
 \end{align}
 
-De la \Cref{eq:dexact_theta} se obtiene
+De la \Cref{eq:dexact_theta} se deduce
 
 \begin{equation}
 	\partial_x \theta = \frac{1}{R} \cos{\varphi} \quad \land \quad \partial_y \theta = \frac{1}{R} \sin{\varphi}
 \end{equation}
 
-y reemplazando en \Cref{eq:constrained_2} se obtiene
+y reemplazando en \Cref{eq:constrained_2} obtenemos
 
 \begin{equation}
 	\partial_y \theta \, dx = \partial_x \theta \, dy \quad \iff \quad x = y
 \end{equation}
 
-Esto muestra que la ligadura es integrable solo si el disco se mueve en la linea recta dada por $x = y$, del resto no es integrable y el sistema seria no holónomo.
+Esto muestra que la ligadura es integrable solo si el disco se mueve en la linea recta dada por $x = y$, de lo contrario, no es integrable y el sistema seria no holónomo.
 
 \section{Aplicación}
 Finaliza la exposición y el director Alfonso Leyva propone un problema para aplicar lo expuesto.
 
-El problema consiste en un pingüino sobre un iglu de forma esférica, el cual se desliza sobre el mismo hasta caer al suelo. Se busca encontrar el angulo critico con respecto al centro del iglu en el cual el pingüino deja de estar en contacto con el iglu y procede a seguir en caída libre. La \Cref{fig:iglu} muestra un diagrama del problema.
+El problema consiste en un pingüino sobre un iglú de forma esférica, el cual se desliza sobre el mismo hasta caer al suelo. Se busca encontrar el ángulo critico con respecto al centro del iglu en el cual el pingüino deja de estar en contacto con el iglu y procede a seguir en caída libre. La \Cref{fig:iglu} muestra un diagrama del problema.
 
-%TODO Add Iglu figure
-
-\begin{figure}[htbp!]
-	\caption{Diagrama del Sistema}
-	\label{fig:iglu}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.3\textwidth]{./Images/iglu.pdf}
+	\caption{Diagrama del Sistema.}
+	\label{fig:iglú}
 \end{figure}
 
 Debido a la naturaleza del sistema, se utilizan las coordenadas polares donde la energía cinética y potencial están dadas por:
@@ -326,13 +355,13 @@ Debido a la naturaleza del sistema, se utilizan las coordenadas polares donde la
 	V &= -mgr\cos{\theta}
 \end{align}
 
-El lagrangiano resultando en:
+El Lagrangiano resulta en:
 
 \begin{equation}
 	\mathcal{L} = \frac{1}{2}m \left(\dot{r}^2 + r^2\dot{\theta}^2 \right) - mgr\cos{\theta}
 \end{equation}
 
-La ligadura de este sistema es $f = r - R$, es del tipo de activación ya que representa si la fuerza normal esta actuando, ya que después del angulo critico no hay contacto con el iglu. Debido a esto, toca utilizar la ecuacion de Euler-Lagrange pero igualado a una fuerza generalizada i.e.
+La ligadura de este sistema es $f = r - R$, es del tipo de activación ya que representa si la fuerza normal esta actuando, ya que después del ángulo critico no hay contacto con el iglú. Debido a esto, se debe utilizar la ecuacion de Euler-Lagrange igualada a una fuerza generalizada i.e.
 
 \begin{equation}
 	\frac{d}{dt}\left(\partial_{\dot{q}} \mathcal{L}\right) - \partial_q \mathcal{L} = \lambda \partial_{q}f
@@ -347,25 +376,29 @@ Aplicando esta ultima ecuación se obtiene
 	2r\dot{r}\dot{\theta} + r^2\ddot{\theta} - gr\sin{\theta} &= 0
 \end{align}
 
-Debido a la ligadura, $r = R \implies r^{(n)} = 0$ las ecuaciones se simplifican ha:
+Debido a la ligadura, $r = R \implies r^{(n)} = 0$ las ecuaciones se simplifican a:
 
 \begin{align}
 	-mR\dot{\theta}^{2} + mg\cos{\theta} &= \lambda \label{eq:r_equation}\\
 	R^2 \ddot{\theta} - gR\sin{\theta} &= 0 \label{eq:critical_theta}
 \end{align}
 
-Usando $\ddot{\theta} = \dot{\theta}\frac{d \theta}{d\theta}$, e integrando la \Cref{eq:critical_theta} se obtiene
+Usando $\ddot{\theta} = \dot{\theta}\frac{d \theta}{d\theta}$, e integrando la \Cref{eq:critical_theta}, se obtiene
 
 \begin{equation}
 	\dot{\theta} |_{\theta_c} = \frac{2}{R} g\left(1 - \cos{\theta_c} \right)
 \end{equation}
 
-Reemplazando en \Cref{eq:r_equation} y tomando las condiciones $\lambda = 0 \implies r = R \; \theta = \theta_c$. Se obtiene la expresión del angulo critico igual a:
+Reemplazando en \Cref{eq:r_equation} y tomando las condiciones $\lambda = 0 \implies r = R \; \theta = \theta_c$. Se obtiene la expresión del ángulo critico igual a:
 
 \begin{equation}
 	\cos{\theta_c} = \frac{2}{3}
 \end{equation}
 
-A partir de aplicar estas condiciones surge la pregunta \emph{¿Por qué se toma $\dot{r} = 0$ si en ese punto la velocidad no necesariamente es 0 y el movimiento sigue?} La razón radica en que el planteamiento va hasta el punto que se detiene el contacto, no se pretende describir lo que sucede después.
+Al aplicar estas condiciones, surge la pregunta: \emph{¿Por qué se toma $\dot{r} = 0$ si en ese punto la velocidad no necesariamente es 0 y el movimiento sigue?} La razón radica en que el planteamiento va hasta el punto que se detiene el contacto, no se pretende describir lo que sucede después.
+
+Con esto se da por finalizada la sección del seminario.
+
+\printbibliography
 
 \end{document}

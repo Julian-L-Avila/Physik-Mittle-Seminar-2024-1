@@ -1,0 +1,46 @@
+\documentclass{standalone}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx, subcaption}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\usepackage{scalerel}
+\usepackage{pict2e}
+\usepackage{tkz-euclide}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{shadows}
+\usetikzlibrary{external}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{snakes}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{statistics}
+\usepgfplotslibrary{fillbetween}
+
+\begin{document}
+\begin{tikzpicture}
+	%\draw [help lines, step=0.1, gray] (0,0) grid (10, 9);
+	%\draw [help lines, blue] (0,0) grid (10, 8);
+
+	%Iglu
+	\node (iglu_center) at (0, 0) {};
+	\node at (iglu_center) [below] {$0$};
+	\draw (iglu_center) ++(5,0)  arc (0:180:5) -- ++(0, -3) -| cycle;
+
+	%Ground
+	\draw [pattern=north east lines] (iglu_center) ++(-5.5, -3) rectangle ++(16, -0.2);
+
+	%Vectors
+	\draw [->, thick] (iglu_center.center) -- node[midway, left] (R) {$R$} ++(0, 5) node (top) { };
+	\draw [->, semithick] (iglu_center.center) -- node[midway, right] (r) {$r$} ++(41.81:5) node (critical_point) { };
+	\draw (iglu_center.center) ++(0, 1) arc (90:41.81:1);
+	\path (iglu_center.center) ++(65:1.2) node{$\theta$};
+	\draw [dashed] (iglu_center.center) -| node[near end, left] (h) {$h$} (critical_point.center);
+
+	%Object
+	\node [draw, circle, fill=white, above of=top, shift={(0, -0.65)}] (mass) {$m$};
+
+	\draw (mass.east) [dashed] arc (86:41.81:5.5) arc (41.81:1:10);
+
+\end{tikzpicture}
+\end{document}
