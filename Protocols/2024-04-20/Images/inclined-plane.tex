@@ -1,0 +1,41 @@
+\documentclass{standalone}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx, subcaption}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\usepackage{scalerel}
+\usepackage{pict2e}
+\usepackage{tkz-euclide}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{shadows}
+\usetikzlibrary{external}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{snakes}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{statistics}
+\usepgfplotslibrary{fillbetween}
+
+\begin{document}
+\begin{tikzpicture}
+	%\draw [help lines, step=0.1, gray] (0,0) grid (10, 9);
+	%\draw [help lines, blue] (0,0) grid (10, 9);
+
+	\node (z) at (0, 0) [below left] {$0$};
+
+	\draw (-0.5, 0) -- ++(11, 0) [->] node[right] {$x$};
+	\path [pattern=north east lines] (0, 0) rectangle ++(10.25, -0.2);
+	\draw (0, -0.5) -- ++(0, 10) [->] node[above] {$y$};
+
+	\draw (10, 0) -- ++ (-10, 8);
+
+	\draw [rotate around={-38.6589:(3, 5.6)}] (3, 5.6) rectangle node[rotate=-38.6589] {$m$} ++(2, 2);
+
+	\draw (8.5, 0) arc (180:141.3411:1.5);
+	\path (10,0) ++(-19:-1.25) node{$\alpha$};
+
+	\draw[snake=brace] (z) -- node[midway,left] {$h$} ++(0, 8);
+
+\end{tikzpicture}
+\end{document}

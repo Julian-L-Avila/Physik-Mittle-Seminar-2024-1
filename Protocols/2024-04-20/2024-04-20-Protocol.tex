@@ -6,10 +6,26 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage{fancyhdr}
 \usepackage[margin=2.54cm]{geometry}
-\usepackage{graphicx}
 \usepackage{graphicx, subcaption}
 \usepackage{tabularx, ragged2e, booktabs}
+\usepackage{float}
 \usepackage[spanish]{cleveref}
+
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\usepackage{scalerel}
+\usepackage{pict2e}
+\usepackage{tkz-euclide}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{shadows}
+\usetikzlibrary{external}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{snakes}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{statistics}
+\usepgfplotslibrary{fillbetween}
 
 \hypersetup{
 	colorlinks=true,
@@ -51,6 +67,8 @@ Siendo aproximadamente las 8:40 del 20 de Abril, 2024, se propone una reprograma
 	\item Potenciales Termodinámicos (Alexei Duran, Diego Acosta) - 1 de Junio
 \end{itemize}
 
+%TODO Add memebrs
+
 \section{Inicio de Sección y Plano Inclinado}
 A las 9:07, comienza la exposición a cargo de Sebastián Manrique y Santiago Talero, titulada \textbf{El Plano Inclinado y la Maquina de Atwood Simple}.
 
@@ -58,9 +76,9 @@ Se utilizan dos sistemas comunes en física para explicar el concepto de ligadur
 
 El sistema consiste en una masa $m$ sobre un plano inclinado un angulo $\alpha$, sin fricción, como se muestra en la \Cref{fig:inclained_plane}.
 
-%TODO Add figure
-
-\begin{figure}[htbp!]
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.30\textwidth]{./Images/inclined-plane.pdf}
 	\caption{Diagrama del Plano Inclinado}
 	\label{fig:inclained_plane}
 \end{figure}
@@ -135,9 +153,10 @@ La maquina de Atwood simple consiste de dos masas conectadas por una cuerda la c
 	\item Si $m_1 \ne m_2 \implies a \ne 0$ i.e. si las masas son diferentes el movimiento sera acelerado.
 \end{itemize}
 
-%TODO Add Atwood machine figure
 
 \begin{figure}[htbp!]
+	\centering
+	\includegraphics[width=0.3\textwidth]{./Images/atwood-machine.pdf}
 	\caption{Diagrama de Maquina de Atwood Simple}
 	\label{fig:atwood_machine}
 \end{figure}
